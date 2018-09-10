@@ -1,0 +1,10 @@
+#lang info
+(define collection "xin")
+(define deps '("base"  "typed-map-lib" "typed-racket-more" "redex-lib"))
+(define build-deps '())
+(define scribblings '())
+(define pkg-desc "a configuration language, like a typed nix or a dhall with fixpoint recursion and reflection")
+(define version "0.0")
+(define pkg-authors '("setori88@gmail.com"))
+(define racket-launcher-names '("xin"))
+(define racket-launcher-libraries '("src/main.rkt"))
