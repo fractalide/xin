@@ -12,12 +12,9 @@ src = (builtins.filterSource (path: type:
   (null == builtins.match "[.][#].*" basePath) &&
   (null == builtins.match "[#].*[#]" basePath) &&
   (null == builtins.match ".*~" basePath)
-) ./src);
+) ./xin);
 attrs = rec {
-  catalog = buildRacketCatalog [
-    src
-  ];
-   xin = buildRacket { package = src; inherit catalog; };
+  xin = buildRacketPackage src;
 };
 in
 
