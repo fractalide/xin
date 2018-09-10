@@ -14,10 +14,7 @@ src = (builtins.filterSource (path: type:
   (null == builtins.match ".*~" basePath)
 ) ./xin);
 attrs = rec {
-  catalog = buildRacketCatalog [
-    src
-  ];
-   xin = buildRacket { package = src; inherit catalog; };
+  xin = buildRacketPackage src;
 };
 in
 
