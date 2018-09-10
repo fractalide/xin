@@ -1,1 +1,6 @@
-(define hello-world "helloworld")
+#lang racket
+
+(define (hello-world) "helloworld")
+
+(module+ main
+  (displayln (hello-world)))
